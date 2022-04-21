@@ -14,6 +14,14 @@
 		B017AEAA280FA858009E195C /* Movie_Night.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B017AEA8280FA858009E195C /* Movie_Night.xcdatamodeld */; };
 		B017AEAC280FA85B009E195C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B017AEAB280FA85B009E195C /* Assets.xcassets */; };
 		B017AEAF280FA85B009E195C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B017AEAD280FA85B009E195C /* LaunchScreen.storyboard */; };
+		B017AEB7280FAA01009E195C /* TrendingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B017AEB6280FAA01009E195C /* TrendingPage.storyboard */; };
+		B017AEB9280FABC5009E195C /* NewPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B017AEB8280FABC5009E195C /* NewPage.storyboard */; };
+		B017AEBB280FB746009E195C /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AEBA280FB746009E195C /* DataGetter.swift */; };
+		B017AEBF280FC4B1009E195C /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AEBE280FC4B1009E195C /* MovieTableViewCell.swift */; };
+		B017AEC1280FC57E009E195C /* TrendingPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AEC0280FC57E009E195C /* TrendingPageTableViewController.swift */; };
+		B017AEC3280FC697009E195C /* TrendingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AEC2280FC697009E195C /* TrendingPageViewController.swift */; };
+		B017AECF2810300D009E195C /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AECD2810300D009E195C /* Results.swift */; };
+		B017AED02810300D009E195C /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AECE2810300D009E195C /* Json4Swift_Base.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		B017AEAB280FA85B009E195C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B017AEAE280FA85B009E195C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B017AEB0280FA85B009E195C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B017AEB6280FAA01009E195C /* TrendingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrendingPage.storyboard; sourceTree = "<group>"; };
+		B017AEB8280FABC5009E195C /* NewPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPage.storyboard; sourceTree = "<group>"; };
+		B017AEBA280FB746009E195C /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
+		B017AEBE280FC4B1009E195C /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		B017AEC0280FC57E009E195C /* TrendingPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingPageTableViewController.swift; sourceTree = "<group>"; };
+		B017AEC2280FC697009E195C /* TrendingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingPageViewController.swift; sourceTree = "<group>"; };
+		B017AECD2810300D009E195C /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Results.swift; path = ../../../../../../Downloads/codegen_625ff86d21247/Results.swift; sourceTree = "<group>"; };
+		B017AECE2810300D009E195C /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Json4Swift_Base.swift; path = ../../../../../../Downloads/codegen_625ff86d21247/Json4Swift_Base.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +74,32 @@
 		B017AE9E280FA857009E195C /* Movie Night */ = {
 			isa = PBXGroup;
 			children = (
+				B017AEC428102E1D009E195C /* JsonSwift */,
 				B017AE9F280FA858009E195C /* AppDelegate.swift */,
 				B017AEA1280FA858009E195C /* SceneDelegate.swift */,
 				B017AEA3280FA858009E195C /* ViewController.swift */,
+				B017AEBA280FB746009E195C /* DataGetter.swift */,
+				B017AEBE280FC4B1009E195C /* MovieTableViewCell.swift */,
+				B017AEC0280FC57E009E195C /* TrendingPageTableViewController.swift */,
+				B017AEC2280FC697009E195C /* TrendingPageViewController.swift */,
 				B017AEA5280FA858009E195C /* Main.storyboard */,
+				B017AEB6280FAA01009E195C /* TrendingPage.storyboard */,
+				B017AEB8280FABC5009E195C /* NewPage.storyboard */,
 				B017AEAB280FA85B009E195C /* Assets.xcassets */,
 				B017AEAD280FA85B009E195C /* LaunchScreen.storyboard */,
 				B017AEB0280FA85B009E195C /* Info.plist */,
 				B017AEA8280FA858009E195C /* Movie_Night.xcdatamodeld */,
 			);
 			path = "Movie Night";
+			sourceTree = "<group>";
+		};
+		B017AEC428102E1D009E195C /* JsonSwift */ = {
+			isa = PBXGroup;
+			children = (
+				B017AECE2810300D009E195C /* Json4Swift_Base.swift */,
+				B017AECD2810300D009E195C /* Results.swift */,
+			);
+			path = JsonSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +162,8 @@
 			files = (
 				B017AEAF280FA85B009E195C /* LaunchScreen.storyboard in Resources */,
 				B017AEAC280FA85B009E195C /* Assets.xcassets in Resources */,
+				B017AEB7280FAA01009E195C /* TrendingPage.storyboard in Resources */,
+				B017AEB9280FABC5009E195C /* NewPage.storyboard in Resources */,
 				B017AEA7280FA858009E195C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +177,12 @@
 			files = (
 				B017AEA4280FA858009E195C /* ViewController.swift in Sources */,
 				B017AEAA280FA858009E195C /* Movie_Night.xcdatamodeld in Sources */,
+				B017AEBF280FC4B1009E195C /* MovieTableViewCell.swift in Sources */,
+				B017AED02810300D009E195C /* Json4Swift_Base.swift in Sources */,
+				B017AEC1280FC57E009E195C /* TrendingPageTableViewController.swift in Sources */,
+				B017AEC3280FC697009E195C /* TrendingPageViewController.swift in Sources */,
+				B017AEBB280FB746009E195C /* DataGetter.swift in Sources */,
+				B017AECF2810300D009E195C /* Results.swift in Sources */,
 				B017AEA0280FA858009E195C /* AppDelegate.swift in Sources */,
 				B017AEA2280FA858009E195C /* SceneDelegate.swift in Sources */,
 			);
@@ -297,8 +337,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,8 +367,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
