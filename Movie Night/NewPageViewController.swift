@@ -1,14 +1,13 @@
 //
-//  TrendingPageViewController.swift
+//  NewPageViewController.swift
 //  Movie Night
 //
-//  Created by 凃佑瑋 on 2022/4/20.
+//  Created by 凃佑瑋 on 2022/4/23.
 //
 
 import UIKit
 import SDWebImage
-
-class TrendingPageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NewPageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var trendingMovies: [MovieData] = []
     @IBOutlet weak var myTableView: UITableView!
@@ -49,7 +48,7 @@ class TrendingPageViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         Task.init {
-            let data: [MovieData] = await DataGetter.getMoviesByType(type: .Trend)
+            let data: [MovieData] = await DataGetter.getMoviesByType(type: .New)
             trendingMovies = data
             print("Await complete.")
             reloadTableView()
