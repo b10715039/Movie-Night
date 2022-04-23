@@ -28,6 +28,10 @@ class NewPageViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.labelNameEn.text = currentMovie.nameEn
         cell.labelDate.text = currentMovie.date
         cell.labelScore.text = String(currentMovie.score)
+        cell.buttonLike.tag = indexPath.row
+        cell.buttonLike.addTarget(self, action: #selector(handleLikes), for: .touchUpInside)
+        var likeString = currentMovie.like ? "喜歡" : "沒有"
+        cell.buttonLike.setTitle(likeString, for: .normal)
         return cell
     }
     
@@ -41,30 +45,29 @@ class NewPageViewController: UIViewController, UITableViewDataSource, UITableVie
         show(newVC, sender: self)
     }
     
-    func reloadTableView() {
-        myTableView.reloadData()
+    @objc func handleLikes(sender: AnyObject) {
+        print("LIKE!")
+        trendingMovies[sender.tag].like = !trendingMovies[sender.tag].like
+        reloadTableView(sender.tag)
     }
-
+    func reloadTableView(_ row: Int = -1) {
+        if row == -1 {
+            myTableView.reloadData()
+        } else {
+            let indexRow = IndexPath(item: row, section: 0)
+            myTableView.reloadRows(at: [indexRow], with: .fade)
+        }
+    }
+    
+    func pushDataToTable(_ movieData: [MovieData]) {
+        trendingMovies.append(contentsOf: movieData)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         Task.init {
             let data: [MovieData] = await DataGetter.getMoviesByType(type: .New)
-            trendingMovies = data
-            print("Await complete.")
+            pushDataToTable(data)
             reloadTableView()
         }
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

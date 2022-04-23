@@ -26,6 +26,7 @@
 		B05E1B8828116036004070C4 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B05E1B8728116036004070C4 /* SDWebImageMapKit */; };
 		B05E1B8C28118775004070C4 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E1B8B28118775004070C4 /* MovieDetailViewController.swift */; };
 		B05E1B8E28138DCE004070C4 /* NewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E1B8D28138DCE004070C4 /* NewPageViewController.swift */; };
+		B05E1B902813B97C004070C4 /* MovieDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05E1B8F2813B97C004070C4 /* MovieDetail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		B017AECE2810300D009E195C /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Json4Swift_Base.swift; path = ../../../../../../Downloads/codegen_625ff86d21247/Json4Swift_Base.swift; sourceTree = "<group>"; };
 		B05E1B8B28118775004070C4 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		B05E1B8D28138DCE004070C4 /* NewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPageViewController.swift; sourceTree = "<group>"; };
+		B05E1B8F2813B97C004070C4 /* MovieDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MovieDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				B017AEC2280FC697009E195C /* TrendingPageViewController.swift */,
 				B017AEA5280FA858009E195C /* Main.storyboard */,
 				B017AEB6280FAA01009E195C /* TrendingPage.storyboard */,
+				B05E1B8F2813B97C004070C4 /* MovieDetail.storyboard */,
 				B017AEB8280FABC5009E195C /* NewPage.storyboard */,
 				B05E1B8D28138DCE004070C4 /* NewPageViewController.swift */,
 				B017AEAB280FA85B009E195C /* Assets.xcassets */,
@@ -177,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05E1B902813B97C004070C4 /* MovieDetail.storyboard in Resources */,
 				B017AEAF280FA85B009E195C /* LaunchScreen.storyboard in Resources */,
 				B017AEAC280FA85B009E195C /* Assets.xcassets in Resources */,
 				B017AEB7280FAA01009E195C /* TrendingPage.storyboard in Resources */,

@@ -14,6 +14,7 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet weak var labelNameEn: UILabel!
     @IBOutlet weak var labelDate: UILabel!
     @IBOutlet weak var labelScore: UILabel!
+    @IBOutlet weak var buttonLike: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
