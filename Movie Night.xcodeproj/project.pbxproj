@@ -16,17 +16,19 @@
 		B017AEAF280FA85B009E195C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B017AEAD280FA85B009E195C /* LaunchScreen.storyboard */; };
 		B017AEB7280FAA01009E195C /* TrendingPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B017AEB6280FAA01009E195C /* TrendingPage.storyboard */; };
 		B017AEB9280FABC5009E195C /* NewPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B017AEB8280FABC5009E195C /* NewPage.storyboard */; };
-		B017AEBB280FB746009E195C /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AEBA280FB746009E195C /* DataGetter.swift */; };
+		B017AEBB280FB746009E195C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AEBA280FB746009E195C /* DataManager.swift */; };
 		B017AEBF280FC4B1009E195C /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AEBE280FC4B1009E195C /* MovieTableViewCell.swift */; };
 		B017AEC1280FC57E009E195C /* TrendingPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AEC0280FC57E009E195C /* TrendingPageTableViewController.swift */; };
 		B017AEC3280FC697009E195C /* TrendingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AEC2280FC697009E195C /* TrendingPageViewController.swift */; };
-		B017AECF2810300D009E195C /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AECD2810300D009E195C /* Results.swift */; };
-		B017AED02810300D009E195C /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017AECE2810300D009E195C /* Json4Swift_Base.swift */; };
 		B05E1B8628116036004070C4 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B05E1B8528116036004070C4 /* SDWebImage */; };
 		B05E1B8828116036004070C4 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B05E1B8728116036004070C4 /* SDWebImageMapKit */; };
 		B05E1B8C28118775004070C4 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E1B8B28118775004070C4 /* MovieDetailViewController.swift */; };
 		B05E1B8E28138DCE004070C4 /* NewPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05E1B8D28138DCE004070C4 /* NewPageViewController.swift */; };
 		B05E1B902813B97C004070C4 /* MovieDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05E1B8F2813B97C004070C4 /* MovieDetail.storyboard */; };
+		B0959277282126A00020955A /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0959275282126A00020955A /* Json4Swift_Base.swift */; };
+		B0959278282126A00020955A /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0959276282126A00020955A /* Results.swift */; };
+		B0959283282137F90020955A /* MovieDataDB+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0959281282137F90020955A /* MovieDataDB+CoreDataClass.swift */; };
+		B0959284282137F90020955A /* MovieDataDB+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0959282282137F90020955A /* MovieDataDB+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,15 +43,17 @@
 		B017AEB0280FA85B009E195C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B017AEB6280FAA01009E195C /* TrendingPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrendingPage.storyboard; sourceTree = "<group>"; };
 		B017AEB8280FABC5009E195C /* NewPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPage.storyboard; sourceTree = "<group>"; };
-		B017AEBA280FB746009E195C /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
+		B017AEBA280FB746009E195C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B017AEBE280FC4B1009E195C /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		B017AEC0280FC57E009E195C /* TrendingPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingPageTableViewController.swift; sourceTree = "<group>"; };
 		B017AEC2280FC697009E195C /* TrendingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingPageViewController.swift; sourceTree = "<group>"; };
-		B017AECD2810300D009E195C /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Results.swift; path = ../../../../../../Downloads/codegen_625ff86d21247/Results.swift; sourceTree = "<group>"; };
-		B017AECE2810300D009E195C /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Json4Swift_Base.swift; path = ../../../../../../Downloads/codegen_625ff86d21247/Json4Swift_Base.swift; sourceTree = "<group>"; };
 		B05E1B8B28118775004070C4 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		B05E1B8D28138DCE004070C4 /* NewPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPageViewController.swift; sourceTree = "<group>"; };
 		B05E1B8F2813B97C004070C4 /* MovieDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MovieDetail.storyboard; sourceTree = "<group>"; };
+		B0959275282126A00020955A /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		B0959276282126A00020955A /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		B0959281282137F90020955A /* MovieDataDB+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieDataDB+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B0959282282137F90020955A /* MovieDataDB+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieDataDB+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 		B017AE93280FA857009E195C = {
 			isa = PBXGroup;
 			children = (
+				B0959281282137F90020955A /* MovieDataDB+CoreDataClass.swift */,
+				B0959282282137F90020955A /* MovieDataDB+CoreDataProperties.swift */,
 				B017AE9E280FA857009E195C /* Movie Night */,
 				B017AE9D280FA857009E195C /* Products */,
 			);
@@ -89,7 +95,7 @@
 				B017AE9F280FA858009E195C /* AppDelegate.swift */,
 				B017AEA1280FA858009E195C /* SceneDelegate.swift */,
 				B017AEA3280FA858009E195C /* ViewController.swift */,
-				B017AEBA280FB746009E195C /* DataGetter.swift */,
+				B017AEBA280FB746009E195C /* DataManager.swift */,
 				B017AEBE280FC4B1009E195C /* MovieTableViewCell.swift */,
 				B017AEC0280FC57E009E195C /* TrendingPageTableViewController.swift */,
 				B017AEC2280FC697009E195C /* TrendingPageViewController.swift */,
@@ -109,8 +115,8 @@
 		B017AEC428102E1D009E195C /* JsonSwift */ = {
 			isa = PBXGroup;
 			children = (
-				B017AECE2810300D009E195C /* Json4Swift_Base.swift */,
-				B017AECD2810300D009E195C /* Results.swift */,
+				B0959275282126A00020955A /* Json4Swift_Base.swift */,
+				B0959276282126A00020955A /* Results.swift */,
 			);
 			path = JsonSwift;
 			sourceTree = "<group>";
@@ -199,13 +205,15 @@
 				B017AEA4280FA858009E195C /* ViewController.swift in Sources */,
 				B017AEAA280FA858009E195C /* Movie_Night.xcdatamodeld in Sources */,
 				B017AEBF280FC4B1009E195C /* MovieTableViewCell.swift in Sources */,
-				B017AED02810300D009E195C /* Json4Swift_Base.swift in Sources */,
 				B05E1B8C28118775004070C4 /* MovieDetailViewController.swift in Sources */,
+				B0959277282126A00020955A /* Json4Swift_Base.swift in Sources */,
 				B017AEC1280FC57E009E195C /* TrendingPageTableViewController.swift in Sources */,
+				B0959278282126A00020955A /* Results.swift in Sources */,
 				B017AEC3280FC697009E195C /* TrendingPageViewController.swift in Sources */,
-				B017AEBB280FB746009E195C /* DataGetter.swift in Sources */,
+				B017AEBB280FB746009E195C /* DataManager.swift in Sources */,
 				B05E1B8E28138DCE004070C4 /* NewPageViewController.swift in Sources */,
-				B017AECF2810300D009E195C /* Results.swift in Sources */,
+				B0959284282137F90020955A /* MovieDataDB+CoreDataProperties.swift in Sources */,
+				B0959283282137F90020955A /* MovieDataDB+CoreDataClass.swift in Sources */,
 				B017AEA0280FA858009E195C /* AppDelegate.swift in Sources */,
 				B017AEA2280FA858009E195C /* SceneDelegate.swift in Sources */,
 			);
@@ -363,6 +371,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,6 +402,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

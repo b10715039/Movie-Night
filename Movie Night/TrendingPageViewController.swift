@@ -49,6 +49,16 @@ class TrendingPageViewController: UIViewController, UITableViewDataSource, UITab
     @objc func handleLikes(sender: AnyObject) {
         print("LIKE!")
         trendingMovies[sender.tag].like = !trendingMovies[sender.tag].like
+        if trendingMovies[sender.tag].like {
+            DataManager.storeMovieToDB(trendingMovies[sender.tag])
+        }
+        else {
+            DataManager.deleteTargetStoredMovieDB(nameCh: trendingMovies[sender.tag].nameCh)
+        }
+        let tMovies = DataManager.fetchStoredMovieDB()
+        for tMovie in tMovies {
+            print(tMovie.nameCh)
+        }
         reloadTableView(sender.tag)
     }
     func reloadTableView(_ row: Int = -1) {
@@ -64,11 +74,17 @@ class TrendingPageViewController: UIViewController, UITableViewDataSource, UITab
         trendingMovies.append(contentsOf: movieData)
     }
     override func viewDidLoad() {
+        DataManager.deleteAllStoredMovieDB()
         super.viewDidLoad()
         Task.init {
-            let data: [MovieData] = await DataGetter.getMoviesByType(type: .Trend)
+            let data: [MovieData] = await DataManager.getMoviesByType(type: .Trend)
             pushDataToTable(data)
             reloadTableView()
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Trending: viewWillAppear, this will be used in favorite movies.")
+
     }
 }

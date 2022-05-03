@@ -65,7 +65,7 @@ class NewPageViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         Task.init {
-            let data: [MovieData] = await DataGetter.getMoviesByType(type: .New)
+            let data: [MovieData] = await DataManager.getMoviesByType(type: .New)
             pushDataToTable(data)
             reloadTableView()
         }
