@@ -89,6 +89,9 @@ class DataManager {
     }
     
     static func storeMovieToDB(_ movie: MovieData) {
+        if findMovieInDB(movie.nameCh) {
+            return
+        }
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -159,5 +162,27 @@ class DataManager {
         } catch {
             print(error)
         }
+    }
+    
+    static func findMovieInDB(_ nameCh: String) -> Bool {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest: NSFetchRequest<MovieDataDB> = MovieDataDB.fetchRequest()
+        let predicate = NSPredicate(format: "nameCh = '\(nameCh)'")
+        fetchRequest.predicate = predicate
+        do {
+            let allMovies = try managedContext.fetch(fetchRequest)
+            if allMovies.count > 0 {
+                return true
+            }
+            else {
+                return false
+            }
+        } catch {
+            print(error)
+        }
+        return false
     }
 }

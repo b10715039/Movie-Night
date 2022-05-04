@@ -10,17 +10,17 @@ import SDWebImage
 
 class TrendingPageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var trendingMovies: [MovieData] = []
+    var movies: [MovieData] = []
     @IBOutlet weak var myTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trendingMovies.count
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as? MovieTableViewCell else {
             return UITableViewCell()
         }
-        let currentMovie = trendingMovies[indexPath.row]
+        let currentMovie = movies[indexPath.row]
         let posterUrl = currentMovie.posterPath
         let fileURL = URL(string: "https://image.tmdb.org/t/p/original/" + posterUrl)
         cell.posterImage.sd_imageIndicator = SDWebImageActivityIndicator.gray
@@ -31,8 +31,8 @@ class TrendingPageViewController: UIViewController, UITableViewDataSource, UITab
         cell.labelScore.text = String(currentMovie.score)
         cell.buttonLike.tag = indexPath.row
         cell.buttonLike.addTarget(self, action: #selector(handleLikes), for: .touchUpInside)
-        var likeString = currentMovie.like ? "喜歡" : "沒有"
-        cell.buttonLike.setTitle(likeString, for: .normal)
+        let likeImageName = currentMovie.like ? "heart-liked" : "heart"
+        cell.buttonLike.setBackgroundImage(UIImage(named: likeImageName), for: .normal)
         return cell
     }
     
@@ -42,18 +42,18 @@ class TrendingPageViewController: UIViewController, UITableViewDataSource, UITab
         
         let newVC = storyboard?.instantiateViewController(withIdentifier: "MovieDetail") as! MovieDetailViewController
         newVC.title = "電影細節"
-        newVC.setData(movieData: trendingMovies[indexPath.row])
+        newVC.setData(movieData: movies[indexPath.row])
         show(newVC, sender: self)
     }
     
     @objc func handleLikes(sender: AnyObject) {
         print("LIKE!")
-        trendingMovies[sender.tag].like = !trendingMovies[sender.tag].like
-        if trendingMovies[sender.tag].like {
-            DataManager.storeMovieToDB(trendingMovies[sender.tag])
+        movies[sender.tag].like = !movies[sender.tag].like
+        if movies[sender.tag].like {
+            DataManager.storeMovieToDB(movies[sender.tag])
         }
         else {
-            DataManager.deleteTargetStoredMovieDB(nameCh: trendingMovies[sender.tag].nameCh)
+            DataManager.deleteTargetStoredMovieDB(nameCh: movies[sender.tag].nameCh)
         }
         let tMovies = DataManager.fetchStoredMovieDB()
         for tMovie in tMovies {
@@ -71,20 +71,35 @@ class TrendingPageViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func pushDataToTable(_ movieData: [MovieData]) {
-        trendingMovies.append(contentsOf: movieData)
+        movies.append(contentsOf: movieData)
+    }
+    
+    func removeAllTable() {
+        movies.removeAll()
+    }
+    
+    func setLikeInDB() {
+        for (index, movie) in movies.enumerated() {
+            if DataManager.findMovieInDB(movie.nameCh) {
+                movies[index].like = true
+            } else {
+                movies[index].like = false
+            }
+        }
+        reloadTableView()
     }
     override func viewDidLoad() {
-        DataManager.deleteAllStoredMovieDB()
+        //DataManager.deleteAllStoredMovieDB()
         super.viewDidLoad()
         Task.init {
             let data: [MovieData] = await DataManager.getMoviesByType(type: .Trend)
             pushDataToTable(data)
             reloadTableView()
+            setLikeInDB()
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Trending: viewWillAppear, this will be used in favorite movies.")
-
+        setLikeInDB()
     }
 }
